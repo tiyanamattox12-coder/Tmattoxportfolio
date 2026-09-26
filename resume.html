@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resume — Tiyana Mattox</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f6f4; --bg-alt:#eeeeea; --surface:#ffffff;
+    --ink:#22262b; --ink-soft:#5b616a;
+    --line:#dcdfe2;
+    --accent:#4d7f9e; --accent-deep:#33566c; --accent-soft:#e6eef2;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1b1d20; --bg-alt:#212427; --surface:#232629;
+      --ink:#eceeef; --ink-soft:#a7adb4;
+      --line:#33373c;
+      --accent:#7fb0cc; --accent-deep:#a7cbe0; --accent-soft:#2a3338;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1b1d20; --bg-alt:#212427; --surface:#232629;
+    --ink:#eceeef; --ink-soft:#a7adb4;
+    --line:#33373c;
+    --accent:#7fb0cc; --accent-deep:#a7cbe0; --accent-soft:#2a3338;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',ui-sans-serif,system-ui,sans-serif; font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif; font-weight:500; margin:0; letter-spacing:-0.01em;}
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+  header{ position:sticky; top:0; top:env(safe-area-inset-top,0px); background:var(--bg); border-bottom:1px solid var(--line); z-index:10; }
+  nav.wrap{ max-width:880px; display:flex; align-items:center; justify-content:space-between; padding-top:18px; padding-bottom:18px; flex-wrap:wrap; gap:12px; }
+  .brand{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.05rem; }
+  .brand span{ color:var(--accent); }
+  .navlinks{ display:flex; gap:28px; font-size:0.95rem; }
+  .navlinks a{ color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .15s, border-color .15s; }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--ink); border-color:var(--accent); }
+  .navlinks a.active{ color:var(--ink); border-color:var(--accent); }
+
+  .page-head{ padding:56px 0 28px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; }
+  .page-head h1{ font-size:clamp(2rem,4vw,2.6rem); }
+  .btn{ display:inline-block; padding:11px 20px; border-radius:3px; font-size:0.95rem; border:1px solid var(--accent); background:var(--accent); color:#fff; white-space:nowrap; }
+  .btn:hover{ background:var(--accent-deep); border-color:var(--accent-deep); }
+
+  section{ padding:32px 0; border-top:1px solid var(--line); }
+  section:first-of-type{ border-top:none; padding-top:0; }
+  section h2{ font-size:1.15rem; margin-bottom:20px; }
+
+  .entry{ margin-bottom:22px; }
+  .entry:last-child{ margin-bottom:0; }
+  .entry-head{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:baseline; }
+  .entry-head h3{ font-size:1rem; }
+  .entry-org{ color:var(--ink-soft); font-size:0.92rem; margin-top:2px; }
+  .entry-date{ font-size:0.85rem; color:var(--ink-soft); white-space:nowrap; }
+  .entry ul{ margin:10px 0 0; padding-left:18px; color:var(--ink-soft); font-size:0.93rem; }
+  .entry ul li{ margin-bottom:5px; }
+
+  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px 32px; }
+  @media (max-width:600px){ .skills-grid{ grid-template-columns:1fr; } }
+  .skill-group h4{ font-family:'Inter'; font-weight:600; font-size:0.85rem; color:var(--ink-soft); margin-bottom:4px; }
+  .skill-group div{ font-size:0.93rem; }
+
+  footer{ border-top:1px solid var(--line); padding:40px 0; margin-top:20px; }
+  .foot-row{ max-width:760px; margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .foot-links{ display:flex; gap:20px; font-size:0.9rem; color:var(--ink-soft); }
+  .foot-links a:hover{ color:var(--accent-deep); }
+  .copyright{ max-width:760px; margin:18px auto 0; padding:0 24px; font-size:0.82rem; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" style="max-width:880px;">
+    <a class="brand" href="index.html">Tiyana Mattox<span>.</span></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" class="active">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Resume</h1>
+    <!-- To update: re-run this build with a new resume PDF and I'll re-encode the download link -->
+    <a class="btn" download="Tiyana_Mattox_Resume.pdf" href="resume.pdf">Download PDF</a>
+  </div>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <div>
+          <h3>Harvard University — Cambridge, MA</h3>
+          <div class="entry-org">B.S. Mechanical Engineering, Mechanical Systems Track · Secondary in Afro-Latino &amp; Caribbean Studies</div>
+        </div>
+        <div class="entry-date">Expected May 2028</div>
+      </div>
+      <ul><li>Relevant coursework: Mechanics; MATLAB (EMG signals and respiratory analysis); Computational Thinking (Python)</li></ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Engineering experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <div>
+          <h3>Undergraduate Researcher</h3>
+          <div class="entry-org">Biodesign Lab, Harvard Robotics Core</div>
+        </div>
+        <div class="entry-date">Jun 2026 – Aug 2026</div>
+      </div>
+      <ul>
+        <li>Designed and executed a design-of-experiments (DOE) study investigating dwell time, pressure, temperature, and fixture geometry to optimize manufacturing of flexible biomedical sensors</li>
+        <li>Independently proposed and tested new manufacturing parameters based on experimental results</li>
+        <li>Fabricated 30–40 sensors using heat press manufacturing, laser cutting, and custom assembly fixtures; contributed to production and evaluation of ~50 prototype devices</li>
+        <li>Operated an Instron universal testing system to evaluate peel strength and characterize adhesive versus cohesive failure modes</li>
+        <li>Developed MATLAB scripts to analyze mechanical testing data, evaluate sensor sensitivity, and generate publication-quality figures</li>
+        <li>Designed an improved manufacturing jig in Fusion 360 and prototyped multiple iterations using 3D printing</li>
+        <li>Presented engineering recommendations and research findings to the principal investigator</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership &amp; activities</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <div><h3>Social Chair</h3><div class="entry-org">Harvard Society of Black Scientists &amp; Engineers (NSBSE)</div></div>
+        <div class="entry-date">Oct 2025 – Present</div>
+      </div>
+      <ul><li>Plan professional, networking, and community-building events for engineering students</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <div><h3>Student-Athlete</h3><div class="entry-org">Harvard Varsity Cheerleading</div></div>
+        <div class="entry-date">Jun 2024 – Present</div>
+      </div>
+      <ul><li>Recipient of the 2025 Unsung Hero Award; balances athletics with engineering coursework</li></ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <div><h3>Community Volunteer</h3><div class="entry-org">PBHA Y2Y Harvard Square Shelter &amp; PBHA KSNAP</div></div>
+        <div class="entry-date">Sep 2025 – Present</div>
+      </div>
+      <ul>
+        <li>Volunteered 12+ hours supporting evening operations for youth experiencing homelessness</li>
+        <li>Led structured enrichment activities for 15 children with special needs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group"><h4>Programming</h4><div>MATLAB, Python</div></div>
+      <div class="skill-group"><h4>CAD &amp; design</h4><div>Fusion 360, 3D printing</div></div>
+      <div class="skill-group"><h4>Manufacturing</h4><div>Heat press manufacturing, soldering, laser cutting, prototype assembly, jig design, polymer processing, machine shop (mill, band saw, sanders)</div></div>
+      <div class="skill-group"><h4>Testing</h4><div>Instron, mechanical testing, peel testing, failure analysis, design of experiments, data visualization</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-row">
+    <div class="brand">Tiyana Mattox</div>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/tiyana-mattox" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/tiyanamattox12-coder" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:Tiyanamattox@college.harvard.edu">Email</a>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Tiyana Mattox.</div>
+</footer>
+
+</body>
+</html>
