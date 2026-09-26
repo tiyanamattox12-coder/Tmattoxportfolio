@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beyond the Lab — Tiyana Mattox</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f6f4; --bg-alt:#eeeeea; --surface:#ffffff;
+    --ink:#22262b; --ink-soft:#5b616a;
+    --line:#dcdfe2;
+    --accent:#4d7f9e; --accent-deep:#33566c; --accent-soft:#e6eef2;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1b1d20; --bg-alt:#212427; --surface:#232629;
+      --ink:#eceeef; --ink-soft:#a7adb4;
+      --line:#33373c;
+      --accent:#7fb0cc; --accent-deep:#a7cbe0; --accent-soft:#2a3338;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1b1d20; --bg-alt:#212427; --surface:#232629;
+    --ink:#eceeef; --ink-soft:#a7adb4;
+    --line:#33373c;
+    --accent:#7fb0cc; --accent-deep:#a7cbe0; --accent-soft:#2a3338;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',ui-sans-serif,system-ui,sans-serif; font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif; font-weight:500; margin:0; letter-spacing:-0.01em;}
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:880px; margin:0 auto; padding:0 24px; }
+  header{ position:sticky; top:0; top:env(safe-area-inset-top,0px); background:var(--bg); border-bottom:1px solid var(--line); z-index:10; }
+  nav.wrap{ display:flex; align-items:center; justify-content:space-between; padding-top:18px; padding-bottom:18px; flex-wrap:wrap; gap:12px; }
+  .brand{ font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.05rem; }
+  .brand span{ color:var(--accent); }
+  .navlinks{ display:flex; gap:24px; font-size:0.95rem; }
+  .navlinks a{ color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .15s, border-color .15s; }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--ink); border-color:var(--accent); }
+  .navlinks a.active{ color:var(--ink); border-color:var(--accent); }
+
+  .page-head{ padding:56px 0 40px; }
+  .page-head h1{ font-size:clamp(2rem,4vw,2.6rem); margin-bottom:12px; }
+  .page-head p{ color:var(--ink-soft); max-width:58ch; }
+  section{ padding-bottom:64px; }
+
+  .entry{ display:grid; grid-template-columns:180px 1fr; gap:28px; padding:28px 0; border-top:1px solid var(--line); align-items:start; }
+  .entry:first-child{ border-top:none; }
+  @media (max-width:600px){ .entry{ grid-template-columns:1fr; } .entry-photo{ width:140px; } }
+
+  /* PHOTO SLOT: replace the dashed placeholder with <img src="images/your-photo.jpg" alt="..."> once uploaded */
+  .entry-photo{ width:100%; aspect-ratio:1; border-radius:2px; border:1px dashed var(--line); background:var(--accent-soft); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .entry-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .entry-photo span{ font-size:0.8rem; color:var(--ink-soft); text-align:center; padding:0 10px; }
+
+  .entry-body h3{ font-size:1.1rem; }
+  .entry-body .org{ color:var(--ink-soft); font-size:0.92rem; margin-top:2px; }
+  .entry-body .date{ font-size:0.82rem; color:var(--ink-soft); margin-top:4px; }
+  .entry-body p{ color:var(--ink-soft); font-size:0.95rem; margin-top:10px; max-width:56ch; }
+
+  footer{ border-top:1px solid var(--line); padding:40px 0; margin-top:20px; }
+  .foot-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .foot-links{ display:flex; gap:20px; font-size:0.9rem; color:var(--ink-soft); }
+  .foot-links a:hover{ color:var(--accent-deep); }
+  .copyright{ font-size:0.82rem; color:var(--ink-soft); margin-top:18px; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Tiyana Mattox<span>.</span></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html" class="active">About</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Beyond the lab</h1>
+    <p>Engineering is one part of how I spend my time — leadership, athletics, and community make up the rest.</p>
+  </div>
+
+  <section>
+    <!--
+      TO ADD ANOTHER ACTIVITY: copy one entire <div class="entry">...</div> block below and edit it.
+      TO SWAP A PHOTO: each entry has an <img src="images/....jpg"> — either replace that file
+      in the images/ folder (same filename) or edit the src path to a different file name.
+      An entry with no photo yet has <span>Add photo</span> instead of an <img> — replace that
+      span with <img src="images/your-file.jpg" alt="description"> once you have one.
+    -->
+    <div class="entry">
+      <div class="entry-photo"><img src="images/nsbe-convention.jpg" alt="Tiyana at the NSBE 2026 Annual Convention"></div>
+      <div class="entry-body">
+        <h3>Social Chair, Harvard Society of Black Scientists &amp; Engineers</h3>
+        <div class="org">NSBSE</div>
+        <div class="date">Oct 2025 – Present</div>
+        <p>I plan professional, networking, and community-building events that help engineering students at Harvard find community and support in the field.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-photo"><img src="images/cheer-action.jpg" alt="Tiyana cheering at a Harvard football game"></div>
+      <div class="entry-body">
+        <h3>Student-Athlete, Varsity Cheerleading</h3>
+        <div class="org">Harvard Athletics</div>
+        <div class="date">Jun 2024 – Present</div>
+        <p>Recipient of the 2025 Unsung Hero Award. Balancing Division I athletics with engineering coursework has taught me a lot about discipline and time management, on and off the mat.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-photo"><img src="images/volunteer-crafts.jpg" alt="Paper craft pumpkins made with kids at a KSNAP enrichment activity"></div>
+      <div class="entry-body">
+        <h3>Community Volunteer</h3>
+        <div class="org">PBHA Y2Y Harvard Square Shelter &amp; PBHA KSNAP</div>
+        <div class="date">Sep 2025 – Present</div>
+        <p>I've volunteered evening shifts supporting youth experiencing homelessness at Y2Y, and led structured enrichment activities for 15 children with special needs through KSNAP.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="foot-row">
+    <div class="brand">Tiyana Mattox</div>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/tiyana-mattox" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/tiyanamattox12-coder" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:Tiyanamattox@college.harvard.edu">Email</a>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Tiyana Mattox.</div>
+</footer>
+
+</body>
+</html>
