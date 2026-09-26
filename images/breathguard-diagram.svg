@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="Inter, ui-sans-serif, sans-serif">
+  <rect width="960" height="540" fill="#ffffff"/>
+
+  <!-- shared mask silhouette as a reusable path -->
+  <defs>
+    <path id="maskShape" d="M -130 0
+      C -130 -55 -60 -78 0 -78
+      C 60 -78 130 -55 130 0
+      C 130 40 70 62 0 62
+      C -70 62 -130 40 -130 0 Z"/>
+  </defs>
+
+  <!-- Layer 1: Outer filtration -->
+  <g transform="translate(160,140)">
+    <use href="#maskShape" fill="#eaf1f5" stroke="#4d7f9e" stroke-width="2"/>
+    <path d="M -30 -102 C -55 -85 -60 -55 -20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <path d="M 30 -102 C 55 -85 60 -55 20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <line x1="-90" y1="-25" x2="90" y2="-25" stroke="#33566c" stroke-width="2"/>
+    <line x1="-95" y1="-5" x2="95" y2="-5" stroke="#33566c" stroke-width="2"/>
+    <line x1="-90" y1="15" x2="90" y2="15" stroke="#33566c" stroke-width="2"/>
+    <circle cx="70" cy="38" r="10" fill="#33566c"/>
+    <rect x="-50" y="30" width="90" height="16" rx="2" fill="#ffffff" stroke="#33566c" stroke-width="1.5"/>
+    <text x="0" y="120" text-anchor="middle" font-size="15" font-weight="600" fill="#22262b">Layer 1</text>
+    <text x="0" y="140" text-anchor="middle" font-size="12.5" fill="#5b616a">Outer filtration + visual display</text>
+  </g>
+
+  <!-- Layer 2: VOC sampling layer -->
+  <g transform="translate(480,140)">
+    <use href="#maskShape" fill="#cfe3ea" stroke="#4d7f9e" stroke-width="2"/>
+    <path d="M -30 -102 C -55 -85 -60 -55 -20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <path d="M 30 -102 C 55 -85 60 -55 20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <g stroke="#33566c" stroke-width="1.4">
+      <line x1="-95" y1="-30" x2="95" y2="-30"/>
+      <line x1="-95" y1="-10" x2="95" y2="-10"/>
+      <line x1="-95" y1="10" x2="95" y2="10"/>
+      <line x1="-95" y1="30" x2="95" y2="30"/>
+      <line x1="-60" y1="-40" x2="-60" y2="45"/>
+      <line x1="-20" y1="-42" x2="-20" y2="48"/>
+      <line x1="20" y1="-42" x2="20" y2="48"/>
+      <line x1="60" y1="-40" x2="60" y2="45"/>
+    </g>
+    <text x="0" y="120" text-anchor="middle" font-size="15" font-weight="600" fill="#22262b">Layer 2</text>
+    <text x="0" y="140" text-anchor="middle" font-size="12.5" fill="#5b616a">VOC sampling layer</text>
+  </g>
+
+  <!-- Layer 3: Embedded sensor strip -->
+  <g transform="translate(800,140)">
+    <use href="#maskShape" fill="#4d7f9e" stroke="#33566c" stroke-width="2"/>
+    <path d="M -30 -102 C -55 -85 -60 -55 -20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <path d="M 30 -102 C 55 -85 60 -55 20 -40" fill="none" stroke="#5b616a" stroke-width="1.5"/>
+    <line x1="-75" y1="0" x2="75" y2="0" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="-75" cy="0" r="9" fill="#ffffff"/>
+    <circle cx="-25" cy="0" r="9" fill="#ffffff"/>
+    <circle cx="25" cy="0" r="9" fill="#ffffff"/>
+    <circle cx="75" cy="0" r="9" fill="#ffffff"/>
+    <text x="0" y="120" text-anchor="middle" font-size="15" font-weight="600" fill="#22262b">Layer 3</text>
+    <text x="0" y="140" text-anchor="middle" font-size="12.5" fill="#5b616a">Embedded sensor strip</text>
+  </g>
+
+  <!-- flow arrows -->
+  <g stroke="#4d7f9e" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="160" y1="340" x2="160" y2="290"/>
+    <line x1="480" y1="340" x2="480" y2="290"/>
+    <line x1="800" y1="340" x2="800" y2="290"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#4d7f9e"/>
+    </marker>
+  </defs>
+  <text x="480" y="365" text-anchor="middle" font-size="14" fill="#5b616a">Exhaled breath flow</text>
+
+  <text x="480" y="460" text-anchor="middle" font-size="16" font-weight="500" fill="#22262b" font-family="'Space Grotesk', sans-serif">BreathGuard — three-layer wearable concept</text>
+</svg>
